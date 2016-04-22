@@ -1,0 +1,300 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.detail a:focus,
+.detail a:hover {
+  color: #CCC
+}
+
+.detail a {
+	color: #FFF;
+	text-decoration: underline;
+}
+
+.table thead th {
+	text-align: center;
+}
+.table tbody td {
+	text-align: center;
+}
+
+
+/* Custom default button */
+/*.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: transparent;
+  text-shadow: none;  
+  background-color: transparent;
+  border: 0px solid #fff;
+  border-radius: 0px;
+}
+*/
+
+.btn-default {
+	color: transparent;
+	text-shadow: none;
+	background-color: transparent;
+	border: 3px solid #DDD8D4;
+}
+
+.cat-box {
+	border: #DDD8D4 solid 3px;
+	padding: 3px 5px 5px 5px;
+	margin: 10px 30px 10px 30px;
+	transition: all 0.3s ease-in-out;
+}
+
+.cat-box:hover {
+	background-color:#2B4B60;
+}
+
+.top-row:hover {  
+    transition: all 0.3s ease-in-out;
+    transform: translate(-10px,-10px);
+    box-shadow: 1px 1px 0px #2C2D3A, 2px 2px 0px #2C2D3A, 3px 3px 0px #2C2D3A, 4px 4px 0px #2C2D3A, 5px 5px 0px #2C2D3A, 6px 6px 0px #2C2D3A, 7px 7px 0px #2C2D3A, 8px 8px 0px #2C2D3A, 9px 9px 0px #2C2D3A, 10px 10px 0px #2C2D3A;
+}
+
+.bot-row:hover {
+	transition: all 0.3s ease-in-out;
+    transform: translate(10px,10px);
+    box-shadow: -1px -1px 0px #2C2D3A, -2px -2px 0px #2C2D3A, -3px -3px 0px #2C2D3A, -4px -4px 0px #2C2D3A, -5px -5px 0px #2C2D3A, -6px -6px 0px #2C2D3A, -7px -7px 0px #2C2D3A, -8px -8px 0px #2C2D3A, -9px -9px 0px #2C2D3A, -10px -10px 0px #2C2D3A;
+}
+
+.cat-box h4{
+	font-weight: bold;
+	padding: 0px 0px 10px 0px;
+	border-bottom: 2px solid #DDD8D4;
+}
+
+.but {
+	border: 3px solid #DDD8D4;
+	border-radius: 0px;
+}
+
+.but:hover {
+	color: white;
+	
+	animation: buttonColor ease-in-out;
+	animation-direction: alternate; 
+	animation-iteration-count: 1;
+    animation-duration: 0.3s;
+    background-color: #2C2D3A;
+}
+
+.but:active,.but:focus {
+	color: #DDD8D4;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: inherit;
+    transition: all .5s;
+}
+
+.btn-primary.btn-outline {
+    color: #428bca;
+}
+
+.btn-primary.btn-outline:hover,
+.btn-success.btn-outline:hover,
+.btn-info.btn-outline:hover,
+.btn-warning.btn-outline:hover,
+.btn-danger.btn-outline:hover {
+    color: #ffffff;
+}
+
+.box-portfolio-jewlery-img {
+	background-image: url("img/neuron-2-icon.png");
+}
+
+.box-portfolio-jewlery a {
+	text-decoration: none;
+}
+
+.content-jewlery img {
+	border: black 5px solid;
+	width: inherit;
+}
+
+/* Row Centering */
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+  background-color: #000;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+          box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+  background-color: #434343;
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  /*font-weight: bold;*/
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 90%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 768px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 90%;
+  }
+}
+
+/*@keyframes buttonColor {
+    25%  {background-color: #0F274F;}
+    50%  {background-color: #245F82;}
+    75%  {background-color: #4180B5;}
+    100% {background-color: #5BACE5;}
+}*/
+
+@keyframes buttonColor {
+    0%  {background-color: transparent;}
+    100% {background-color: #2C2D3A;}
+}
+
+@keyframes pop {
+	0% {transform: translate(0px,0px);}
+	100% {transform: translate(-10px,-10px);}
+}
