@@ -1,0 +1,251 @@
+body {
+  color: #444;
+  background-color: #FFFFFF;
+  width: 100%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  overflow: hidden; }
+
+.main-presenter {
+  height: 2.5em;
+  top: 40vh;
+  padding: 0; }
+
+.main-presenter h1 {
+  font-size: 2.5em;
+  height: 100%;
+  margin: 0;
+  text-align: right; }
+
+.jack-of-many {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  top: 40vh;
+  margin: 0; }
+
+.jack-of-many ul {
+  padding: 0; }
+
+.jack-of-many li {
+  font-size: 2.5em;
+  list-style: none;
+  list-style-type: none; }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 20em;
+  text-align: center;
+  left: calc(50% - 10em); }
+
+.navbar-brand h3 {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.7em;
+  margin: 0; }
+
+.navbar-nav {
+  font-family: 'Raleway', sans-serif; }
+
+#bubbles-back {
+  overflow: hidden;
+  /*
+  	-webkit-backface-visibility:hidden; 
+  	-moz-backface-visibility:hidden;
+  	backface-visibility:hidden;	
+  */
+  /*
+  	-webkit-transform-style: preserve-3d;
+  	-moz-transform-style: preserve-3d;
+  	transform-style: preserve-3d;
+  */ }
+
+.bubble {
+  position: absolute;
+  /*
+  	filter: blur(0px) !important; 
+  	-webkit-filter: blur(0px) !important;
+  */
+  z-index: -1;
+  opacity: 0.2;
+  height: 4em;
+  width: 4em;
+  border-radius: 2em;
+  border-width: 2em;
+  border-color: #969696;
+  border-style: solid;
+  transition: border 0.7s, transform 2s linear;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  	/*
+  -webkit-transform:translateZ(0);
+  	-moz-transform:translateZ(0);
+  	transform:translateZ(0);
+  */ }
+
+.bubble-toggle-c1 {
+  border-color: #0f9bf2; }
+
+.bubble-toggle-c2 {
+  border-color: #1857F7; }
+
+.bubble-toggle-c3 {
+  border-color: #12BECE; }
+
+/* Bootstrap Custom Navbar coloring */
+.navbar-default {
+  background-color: transparent;
+  border-bottom: 1px solid transparent; }
+
+#main-navbar {
+  -moz-transition: border-color 0.6s;
+  -webkit-transition: border-color 0.6s;
+  transition: border-color 0.6s; }
+
+.navbar-default .navbar-brand {
+  color: #1b1b1b;
+  font-size: 1.4em; }
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+  color: #1b1b1b; }
+
+.navbar-default .navbar-text {
+  color: #1b1b1b; }
+
+.navbar-default .navbar-nav > li {
+  padding-left: 0px; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #1b1b1b; }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #0f9bf2;
+  background-color: transparent; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #1b1b1b;
+  background-color: transparent; }
+
+/* When we hover on an active element, color it */
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  color: #0f9bf2;
+  background-color: transparent; }
+
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus {
+  color: #0f9bf2;
+  background-color: transparent; }
+
+.navbar-default .navbar-toggle {
+  border-color: #acacac; }
+
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+  background-color: transparent; }
+
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #1b1b1b; }
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #1b1b1b; }
+
+.navbar-default .navbar-link {
+  color: #1b1b1b; }
+
+.navbar-default .navbar-link:hover {
+  color: #1b1b1b; }
+
+.navbar-default .navbar-nav > li > a {
+  -moz-transition: color 0.2s, border 0.2s, background-color 0.2s;
+  -webkit-transition: color 0.2s, border 0.2s, background-color 0.2s;
+  transition: color 0.2s, border 0.2s, background-color 0.2s; }
+
+@media (min-width: 767px) {
+  /*Only on desktop*/
+  /* Code for the underline on click/hover/active */
+  .navbar-default .navbar-nav > .active > a:after,
+  .navbar-default .navbar-nav > .active > a:hover:after,
+  .navbar-default .navbar-nav > .active > a:focus:after {
+    color: #868686;
+    background-color: transparent;
+    border-bottom: 2px solid #0f9bf2;
+    content: "";
+    padding-top: 5px;
+    width: 80%;
+    display: block;
+    margin: 0 auto; }
+
+  .navbar-default .navbar-nav > .active > a:after {
+    border-color: #868686; }
+
+  .navbar-default .navbar-nav > .open > a:after,
+  .navbar-default .navbar-nav > .open > a:hover:after,
+  .navbar-default .navbar-nav > .open > a:focus:after {
+    color: #868686;
+    background-color: transparent;
+    border-bottom: 2px solid #0f9bf2;
+    content: "";
+    padding-top: 5px;
+    width: 80%;
+    display: block;
+    margin: 0 auto; }
+
+  .navbar-default .navbar-nav > li > a:hover:after,
+  .navbar-default .navbar-nav > li > a:focus:after {
+    color: #868686;
+    background-color: transparent;
+    border-bottom: 2px solid #0f9bf2;
+    content: "";
+    padding-top: 5px;
+    width: 80%;
+    display: block;
+    margin: 0 auto; } }
+@media (max-width: 767px) {
+  /* 	We don't want the list items pulled right if on mobile */
+  .pull-right {
+    float: none !important; }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #1b1b1b; }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #1b1b1b; }
+
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #1b1b1b;
+    background-color: #e6e6e6; }
+
+  .navbar-default .navbar-collapse {
+    background-color: #e6e6e6; }
+
+  .navbar-default .navbar-nav > li > a {
+    color: #1b1b1b; }
+
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color: #1b1b1b;
+    background-color: #d8d8d8; }
+
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: #1b1b1b;
+    background-color: #d8d8d8; }
+
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:hover,
+  .navbar-default .navbar-nav > .open > a:focus {
+    color: transparent;
+    background-color: #d8d8d8; } }
+
+/*# sourceMappingURL=style.css.map */
