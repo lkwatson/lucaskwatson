@@ -17,13 +17,29 @@ body {
 	//overflow: hidden;
 }
 
+#brand-hover:hover {
+	
+}
+
+.bhmover {
+	//display: none;
+	position: relative;
+	margin-left: -20%;
+	opacity: 0.5;
+	//left: 5px;
+}
+
+@keyframes brand-hover-text {
+	
+}
+
 //General page
 
 .page {
 	margin-top: 10em;
 }
 
-.right-present p {
+.right-present p, .right-present li {
 	padding-top: 0.5em;
 	font-size: 1.7em;
 	line-height: 1.25em;
@@ -39,7 +55,7 @@ body {
 // Landing Page
 
 #page-landing {
-	margin-top: 40vh;
+	margin-top: 30vh;
 }
 
 .left-present {

@@ -49,13 +49,13 @@ $(document).ready(function() {
 	}
 	
 	animateBubles = function(offsetX, offsetY) {
+		var height = $(window).height();
+		var width = $(window).width();
 		$('.bubble').each(function() {
-			var height = $(window).height();
-			var width = $(window).width();
 			
 			//console.time('parsing');
-			var elmTop  = parseFloat( this.style.top );
-			var elmLeft = parseFloat( this.style.left );
+			//var elmTop  = parseFloat( this.style.top );
+			//var elmLeft = parseFloat( this.style.left );
 			var curPosX = parseFloat( $(this).css('transform').split(/[()]/)[1].split(',')[4] )*100 / width; //parseFloat( this.style.top  )
 			var curPosY = parseFloat( $(this).css('transform').split(/[()]/)[1].split(',')[5] )*100 / height; //parseFloat( this.style.left )
 			var velX 		= parseFloat( $(this).attr('velx') );
@@ -74,8 +74,8 @@ $(document).ready(function() {
 				*/
 				//'transform': 'translateX('+(curPosX + (velX * 2/(-1*depth)))+'vw) translateY('+(curPosY + (velY * 2/(-1*depth)))+'vh) translateZ(0)',
 				'transform': 'translate3d(' + (curPosX + (velX * plax)) + 'vw,' + (curPosY + (velY * plax)) + 'vh,0)',
-				'top' : (offsetY*plax) + 'vh', //elmTop+
-				'left': (offsetX*plax) + 'vw', //elmLeft+
+				//'top' : (offsetY*plax) + 'vh', //elmTop+
+				//'left': (offsetX*plax) + 'vw', //elmLeft+
 			});
 			
 			//TODO make this DRY
@@ -92,30 +92,40 @@ $(document).ready(function() {
 				$(this).attr('vely',Math.abs(velY));
 			}
 			
-			//if the bubble is out of view, move it
-			/*
-if(elmTop > 130) {
-				$(this).css('top',-30);
-			}
-			if(elmTop < -30) {
-				$(this).css('top',130);
-			}
-*/
-			
 			//console.timeEnd('parsing');
 
 		});
 	}
+	
+	topOffsetBubbles = function(offsetY) {
+		var height = $(window).height();
+		$('.bubble').each(function() {
+			var depth		= $(this).css('z-index');
+			var plax		= 2/(-1*depth);
+			$(this).css({
+				'top' : (offsetY*plax) + 'vh'
+			});
+		});
+	}
+/*
+	
 	//var prevScrollPos;
 	$(window).scroll(function() {
 	  var winScroll = $(window).scrollTop();
 	  //var neg = (winScroll < prevScrollPos ? 1 : -1);
 	  //prevScrollPos = winScroll;
 	  console.log(winScroll);
-	  animateBubles(0,winScroll/10);
+	  topOffsetBubbles(winScroll/10);
 	});
+*/
 	
 	createBubbles(15); //create bubbles run immediately 
 	setInterval(function(){animateBubles(0,0)}, 2000); //keep them moving
+	
+	setInterval(function(){
+		var winScroll = window.pageYOffset;//$(window).scrollTop();
+		console.log(winScroll);
+	  topOffsetBubbles(winScroll/-5);
+	}, 100);
 	
 });
