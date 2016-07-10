@@ -11,7 +11,7 @@ $(document).ready(function() {
 	  }
 	);
 	
-	//create the bubblges
+	//create the bubbles
 	createBubbles = function(n) {
 		for(var i = 0; i < n; i++) {
 			var bubbleSize = (Math.random() * 20) + 5;
@@ -33,9 +33,11 @@ $(document).ready(function() {
 						'border-radius': bubbleSize + 'em',
 						'border-width': (bubbleSize/2 + 1) + 'em',
 						
-						//'top': Math.random() * 100 + '%',
-						//'left': Math.random() * 100 + '%',
-						'transform': 'translateX(' + (Math.random() * 100) + 'vw) translateY(' + Math.floor(Math.random() * 100) + 'vh)',
+						'top': 0,//Math.random() * 100 + '%',
+						'left': 0,//Math.random() * 100 + '%',
+						//translateZ fixes a flickering bug in some browsers
+						//'transform': 'translateX(' + (Math.random() * 100) + 'vw) translateY(' + (Math.random() * 100) + 'vh) translateZ(0)',
+						'transform': 'translate3d(' + (Math.random() * 100) + 'vw,' + (Math.random() * 100) + 'vh,0)',
 						
 						'filter'					: 'blur('+( ((-1*depth)/5) + 2 )+'px)',
 						'-webkit-filter' 	: 'blur('+( ((-1*depth)/5) + 2 )+'px)',
@@ -43,30 +45,41 @@ $(document).ready(function() {
 			$('#bubbles-back').append(bubble);
 		}
 		
-		animateBubles(); //animate them immediately 
+		animateBubles(0,0); //animate them immediately 
 	}
 	
-	function animateBubles() {
+	animateBubles = function(offsetX, offsetY) {
 		$('.bubble').each(function() {
 			var height = $(window).height();
 			var width = $(window).width();
 			
-			var curPosX = parseFloat($(this).css('transform').split(/[()]/)[1].split(',')[4])*100 / width; //parseFloat( this.style.top  )
-			var curPosY = parseFloat($(this).css('transform').split(/[()]/)[1].split(',')[5])*100 / height; //parseFloat( this.style.left )
+			//console.time('parsing');
+			var elmTop  = parseFloat( this.style.top );
+			var elmLeft = parseFloat( this.style.left );
+			var curPosX = parseFloat( $(this).css('transform').split(/[()]/)[1].split(',')[4] )*100 / width; //parseFloat( this.style.top  )
+			var curPosY = parseFloat( $(this).css('transform').split(/[()]/)[1].split(',')[5] )*100 / height; //parseFloat( this.style.left )
 			var velX 		= parseFloat( $(this).attr('velx') );
 			var velY		= parseFloat( $(this).attr('vely') );
 			var depth		= $(this).css('z-index');
 			
+			var plax		= 2/(-1*depth);
+			
 			//console.log((-1*depth/21) + " vX: " + velX + " vY: " + velY + " X: " + curPosX + " Y: " + curPosY);
+			
 			
 			$(this).css({
 				/*
 				'top' : curPosX + (velX * 2/(-1*depth)) + '%', //* (-1*depth/21)
 				'left': curPosY + (velY * 2/(-1*depth)) + '%',
 				*/
-				'transform': 'translateX('+(curPosX + (velX * 2/(-1*depth)))+'vw) translateY('+(curPosY + (velY * 2/(-1*depth)))+'vh)',
+				//'transform': 'translateX('+(curPosX + (velX * 2/(-1*depth)))+'vw) translateY('+(curPosY + (velY * 2/(-1*depth)))+'vh) translateZ(0)',
+				'transform': 'translate3d(' + (curPosX + (velX * plax)) + 'vw,' + (curPosY + (velY * plax)) + 'vh,0)',
+				'top' : (offsetY*plax) + 'vh', //elmTop+
+				'left': (offsetX*plax) + 'vw', //elmLeft+
 			});
 			
+			//TODO make this DRY
+			//Switch directions if we get outside of the screen
 			if(curPosX > 110) {
 				$(this).attr('velx',-1*Math.abs(velX));
 			}else if(curPosX < -10) {
@@ -78,11 +91,31 @@ $(document).ready(function() {
 			}else if(curPosY < -10) {
 				$(this).attr('vely',Math.abs(velY));
 			}
+			
+			//if the bubble is out of view, move it
+			/*
+if(elmTop > 130) {
+				$(this).css('top',-30);
+			}
+			if(elmTop < -30) {
+				$(this).css('top',130);
+			}
+*/
+			
+			//console.timeEnd('parsing');
 
 		});
 	}
+	//var prevScrollPos;
+	$(window).scroll(function() {
+	  var winScroll = $(window).scrollTop();
+	  //var neg = (winScroll < prevScrollPos ? 1 : -1);
+	  //prevScrollPos = winScroll;
+	  console.log(winScroll);
+	  animateBubles(0,winScroll/10);
+	});
 	
-	createBubbles(10); //create bubbles run immediately 
-	setInterval(function(){animateBubles()}, 2000); //keep them moving
+	createBubbles(15); //create bubbles run immediately 
+	setInterval(function(){animateBubles(0,0)}, 2000); //keep them moving
 	
 });

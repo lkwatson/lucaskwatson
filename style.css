@@ -3,24 +3,38 @@ body {
   background-color: #FFFFFF;
   width: 100%;
   font-family: 'Raleway', sans-serif;
-  font-weight: 300;
-  overflow: hidden; }
+  font-weight: 300; }
 
-.main-presenter {
+.page {
+  margin-top: 10em; }
+
+.right-present p {
+  padding-top: 0.5em;
+  font-size: 1.7em;
+  line-height: 1.25em; }
+
+@media (max-width: 767px) {
+  .right-present {
+    width: 60vw;
+    margin-left: 20vw; } }
+#page-landing {
+  margin-top: 40vh; }
+
+.left-present {
   height: 2.5em;
-  top: 40vh;
   padding: 0; }
 
-.main-presenter h1 {
+.left-present h1 {
   font-size: 2.5em;
+  line-height: 1.25em;
+  font-weight: 400;
   height: 100%;
   margin: 0;
   text-align: right; }
 
 .jack-of-many {
   font-family: 'Raleway', sans-serif;
-  font-weight: 600;
-  top: 40vh;
+  font-weight: 500;
   margin: 0; }
 
 .jack-of-many ul {
@@ -28,8 +42,25 @@ body {
 
 .jack-of-many li {
   font-size: 2.5em;
+  line-height: 1.25em;
+  padding-bottom: 0.25em;
   list-style: none;
   list-style-type: none; }
+
+.jack-of-many li:nth-child(1) {
+  color: #373737; }
+
+.jack-of-many li:nth-child(2) {
+  color: #5e5e5e; }
+
+.jack-of-many li:nth-child(3) {
+  color: #848484; }
+
+.jack-of-many li:nth-child(4) {
+  color: #aaaaaa; }
+
+.jack-of-many li:nth-child(5) {
+  color: #d0d0d0; }
 
 .footer {
   position: absolute;
@@ -38,6 +69,18 @@ body {
   text-align: center;
   left: calc(50% - 10em); }
 
+@media (max-width: 767px) {
+  .left-present {
+    margin-bottom: 2em; }
+
+  .left-present h1 {
+    text-align: center; }
+
+  .jack-of-many li {
+    text-align: center; }
+
+  #page-landing {
+    margin-top: 20vh; } }
 .navbar-brand h3 {
   font-family: 'Dosis', sans-serif;
   font-size: 1.7em;
@@ -47,50 +90,53 @@ body {
   font-family: 'Raleway', sans-serif; }
 
 #bubbles-back {
+  width: 100vw;
+  height: 400vh;
   overflow: hidden;
-  /*
-  	-webkit-backface-visibility:hidden; 
-  	-moz-backface-visibility:hidden;
-  	backface-visibility:hidden;	
-  */
-  /*
-  	-webkit-transform-style: preserve-3d;
-  	-moz-transform-style: preserve-3d;
-  	transform-style: preserve-3d;
-  */ }
+  z-index: -20;
+  position: fixed;
+  top: 0;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  will-change: transform, border; }
 
 .bubble {
-  position: absolute;
-  /*
-  	filter: blur(0px) !important; 
-  	-webkit-filter: blur(0px) !important;
-  */
+  position: fixed;
   z-index: -1;
   opacity: 0.2;
   height: 4em;
   width: 4em;
+  top: 0;
+  left: 0;
   border-radius: 2em;
-  border-width: 2em;
-  border-color: #969696;
-  border-style: solid;
-  transition: border 0.7s, transform 2s linear;
+  background-color: #969696;
+  transition: border 0.7s, background-color 0.7s, transform 2s linear, top 0.5s, left 0.5s;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
   backface-visibility: hidden;
-  	/*
-  -webkit-transform:translateZ(0);
-  	-moz-transform:translateZ(0);
-  	transform:translateZ(0);
-  */ }
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  transform: scale(1);
+  will-change: transform, translate, translate3d, translateX, translateY, translateZ, border; }
 
 .bubble-toggle-c1 {
-  border-color: #0f9bf2; }
+  border-color: #0f9bf2;
+  background-color: #0f9bf2; }
 
 .bubble-toggle-c2 {
-  border-color: #1857F7; }
+  border-color: #1857F7;
+  background-color: #1857F7; }
 
 .bubble-toggle-c3 {
-  border-color: #12BECE; }
+  border-color: #12BECE;
+  background-color: #12BECE; }
 
 /* Bootstrap Custom Navbar coloring */
 .navbar-default {
