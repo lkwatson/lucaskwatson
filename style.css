@@ -5,13 +5,57 @@ body {
   font-family: 'Raleway', sans-serif;
   font-weight: 300; }
 
-.bhmover {
-  position: relative;
-  margin-left: -20%;
-  opacity: 0.5; }
+a:hover {
+  text-decoration: none; }
 
+#brand-hover:hover .bhm {
+  opacity: 1;
+  margin-left: -0.18em; }
+
+#brand-hover:hover .bhmx {
+  opacity: 1;
+  margin-left: -0.18em; }
+
+.bhs, .bhm {
+  margin-left: -0.18em; }
+
+.bhm {
+  margin-left: -0.35em;
+  opacity: 0;
+  animation: brand-hover-hidden 3s;
+  transition: margin 1s, opacity 1s; }
+
+.bhmx {
+  margin-left: -1.6em;
+  opacity: 0;
+  animation: brand-hover-hidden-x 3s;
+  transition: margin 1s, opacity 1s; }
+
+@keyframes brand-hover-hidden {
+  0% {
+    opacity: 1;
+    margin-left: -0.18em; }
+  50% {
+    opacity: 1;
+    margin-left: -0.18em; }
+  100% {
+    opacity: 0;
+    margin-left: -0.35em; } }
+@keyframes brand-hover-hidden-x {
+  0% {
+    opacity: 1;
+    margin-left: -0.18em; }
+  50% {
+    opacity: 1;
+    margin-left: -0.18em; }
+  100% {
+    opacity: 0;
+    margin-left: -1.6em; } }
 .page {
   margin-top: 10em; }
+
+.right-present {
+  width: 40%; }
 
 .right-present p, .right-present li {
   padding-top: 0.5em;
@@ -20,13 +64,12 @@ body {
 
 @media (max-width: 767px) {
   .right-present {
-    width: 60vw;
-    margin-left: 20vw; } }
+    width: 80vw;
+    margin-left: 10vw; } }
 #page-landing {
   margin-top: 30vh; }
 
 .left-present {
-  height: 2.5em;
   padding: 0; }
 
 .left-present h1 {
@@ -37,6 +80,21 @@ body {
   margin: 0;
   text-align: right; }
 
+.left-present ul {
+  padding: 20px 0px 0px 0px; }
+
+.left-present li {
+  font-size: 1.3em;
+  line-height: 1.25em;
+  margin: 0;
+  padding-bottom: 0.25em;
+  text-align: right;
+  list-style: none;
+  list-style-type: none; }
+
+@media (max-width: 767px) {
+  .left-present li {
+    text-align: center; } }
 .jack-of-many {
   font-family: 'Raleway', sans-serif;
   font-weight: 500;
@@ -68,16 +126,11 @@ body {
   color: #d0d0d0; }
 
 .footer {
-  position: absolute;
-  bottom: 0;
   width: 20em;
-  text-align: center;
-  left: calc(50% - 10em); }
+  text-align: left;
+  margin-left: 1em; }
 
 @media (max-width: 767px) {
-  .left-present {
-    margin-bottom: 2em; }
-
   .left-present h1 {
     text-align: center; }
 
@@ -89,7 +142,8 @@ body {
 .navbar-brand h3 {
   font-family: 'Dosis', sans-serif;
   font-size: 1.7em;
-  margin: 0; }
+  margin: 0;
+  width: 10em; }
 
 .navbar-nav {
   font-family: 'Raleway', sans-serif; }

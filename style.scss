@@ -17,26 +17,76 @@ body {
 	//overflow: hidden;
 }
 
-#brand-hover:hover {
-	
+a:hover {
+	text-decoration: none;
 }
 
-.bhmover {
-	//display: none;
-	position: relative;
-	margin-left: -20%;
-	opacity: 0.5;
-	//left: 5px;
+#brand-hover:hover .bhm {
+	opacity: 1;
+	margin-left: -0.18em;
 }
 
-@keyframes brand-hover-text {
-	
+#brand-hover:hover .bhmx {
+	opacity: 1;
+	margin-left: -0.18em;
+}
+
+.bhs, .bhm {
+	margin-left: -0.18em;
+}
+
+.bhm {
+	margin-left: -0.35em;
+	opacity: 0;
+	animation: brand-hover-hidden 3s;
+	transition: margin 1s, opacity 1s;
+}
+//just a little x-tra
+.bhmx{
+	margin-left: -1.6em;
+	opacity: 0;
+	animation: brand-hover-hidden-x 3s;
+	transition: margin 1s, opacity 1s;
+}
+
+@keyframes brand-hover-hidden {
+	0% {
+		opacity: 1;
+		margin-left: -0.18em;
+	}
+	50% {
+		opacity: 1;
+		margin-left: -0.18em;
+	}
+	100% {
+		opacity: 0;
+		margin-left: -0.35em;
+	}
+}
+
+@keyframes brand-hover-hidden-x {
+	0% {
+		opacity: 1;
+		margin-left: -0.18em;
+	}
+	50% {
+		opacity: 1;
+		margin-left: -0.18em;
+	}
+	100% {
+		opacity: 0;
+		margin-left: -1.6em;
+	}
 }
 
 //General page
 
 .page {
 	margin-top: 10em;
+}
+
+.right-present {
+	width: 40%;
 }
 
 .right-present p, .right-present li {
@@ -47,8 +97,8 @@ body {
 
 @media(max-width: 767px) {
 	.right-present {
-		width: 60vw;
-		margin-left: 20vw;
+		width: 80vw;
+		margin-left: 10vw;
 	}
 }
 
@@ -59,7 +109,6 @@ body {
 }
 
 .left-present {
-	height: 2.5em;
 	padding: 0;
 }
 
@@ -71,6 +120,29 @@ body {
 	margin: 0;
 	
 	text-align: right;
+}
+
+.left-present ul {
+	padding: 20px 0px 0px 0px;
+}
+
+.left-present li {
+	font-size: 1.3em;
+	line-height: 1.25em;
+	
+	margin: 0;
+	
+	padding-bottom: 0.25em;
+	text-align: right;
+	
+	list-style: none;
+	list-style-type: none;
+}
+
+@media(max-width: 767px) {
+	.left-present li {
+		text-align: center;
+	}
 }
 
 .jack-of-many {
@@ -101,17 +173,15 @@ body {
 }
 
 .footer {
-	position: absolute;
-	bottom: 0;
 	width: 20em;
-	text-align: center;
-	left: calc(50% - 10em);
+	text-align: left;
+	margin-left: 1em;
 }
 
 //Size and center text on mobile
 @media(max-width: 767px) {
 	.left-present {
-		margin-bottom: 2em;
+		
 	}
 	.left-present h1 {
 		text-align: center;
@@ -133,6 +203,7 @@ body {
 	font-family: 'Dosis', sans-serif;
 	font-size: 1.7em;
 	margin: 0;
+	width: 10em;
 }
 
 .navbar-nav {
