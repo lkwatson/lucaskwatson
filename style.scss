@@ -167,7 +167,7 @@ a:hover {
 }
 
 @for $i from 1 through 5 {
-	.jack-of-many li:nth-child(#{$i}) {
+	.jack-of-many a:nth-child(#{$i}) {
 		color: lighten(#111, 15% * $i);
 	}
 }

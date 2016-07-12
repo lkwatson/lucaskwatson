@@ -110,19 +110,19 @@ a:hover {
   list-style: none;
   list-style-type: none; }
 
-.jack-of-many li:nth-child(1) {
+.jack-of-many a:nth-child(1) {
   color: #373737; }
 
-.jack-of-many li:nth-child(2) {
+.jack-of-many a:nth-child(2) {
   color: #5e5e5e; }
 
-.jack-of-many li:nth-child(3) {
+.jack-of-many a:nth-child(3) {
   color: #848484; }
 
-.jack-of-many li:nth-child(4) {
+.jack-of-many a:nth-child(4) {
   color: #aaaaaa; }
 
-.jack-of-many li:nth-child(5) {
+.jack-of-many a:nth-child(5) {
   color: #d0d0d0; }
 
 .footer {
