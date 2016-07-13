@@ -1,5 +1,10 @@
 $(document).ready(function() {
 	
+	$('#skills-content-list').scrollspy({
+    target: '#sidebar-nav-skills',
+    offset: 50
+	});
+	
 	$(".feature-hova-cola").hover(
 		//the ID of the hovered element is conveniently the same name as the class we want to add to bubbles
 	  function() {
@@ -91,8 +96,6 @@ $(document).ready(function() {
 			}else if(curPosY < -10) {
 				$(this).attr('vely',Math.abs(velY));
 			}
-			
-			//console.timeEnd('parsing');
 
 		});
 	}
@@ -124,7 +127,6 @@ $(document).ready(function() {
 	
 	setInterval(function(){
 		var winScroll = window.pageYOffset;//$(window).scrollTop();
-		console.log(winScroll);
 	  topOffsetBubbles(winScroll/-5);
 	}, 100);
 	
