@@ -6,6 +6,13 @@ $feat-c1: #0f9bf2;
 $feat-c2: #1857F7;
 $feat-c3: #12BECE;
 
+//this offers some improvements on animation performance
+* {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
 body {
 	color: $pc;
 	background-color: $bgc;
@@ -16,6 +23,119 @@ body {
 	
 	//overflow: hidden;
 }
+
+.container-fullwidth .row {
+	margin: 0;
+}
+
+//skills.html additional
+
+.skills-scoll-list {
+	height: 89vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.skills-navbar {
+	padding-left:0.5em;
+}
+.skills-navbar h3 {
+	margin-left:0.5em;
+}
+
+.skills-navbar a {
+	color: black;
+	font-size: 1.1em;
+  font-weight: 300;
+}
+
+.skills-navbar li>a {
+	border-left: 2px solid transparent;
+}
+
+.skills-navbar a {
+	transition: color 0.2s;
+}
+
+.skills-navbar li>ul>li {
+	padding-left: 1em;
+}
+
+.skills-navbar .active>a, 
+.skills-navbar li>a:hover, 
+.skills-navbar li>a:focus {
+    color: $feat-c1;                 
+    text-decoration: none;          
+    background-color: rgba(200,200,200,0.2);  
+    border-color: $feat-c1; 
+}
+.skills-navbar .active>a, 
+.skills-navbar .active:hover>a,
+.skills-navbar .active:focus>a {
+    font-weight: 700;
+}
+.skills-navbar .nav>.active>a, 
+.skills-navbar .nav>.active:hover>a,
+.skills-navbar .nav>.active:focus>a {
+    font-weight: 500;
+}
+
+.skills-scoll-list p {
+	font-size: 1.2em;
+	font-weight: 400;
+}
+
+.skills-scoll-list h4 {
+	font-weight: 600;
+}
+
+.skill-subhead {
+	color: #7e7e7e;
+	font-size: 80%;
+	position: relative;
+	bottom: 0.1em;
+}
+
+//connect.html
+
+.connect-links {
+	margin-top: 20vh;
+	height: 70vh;
+}
+
+.connect-links h3 {
+	opacity: 1;
+	position: relative;
+	animation: setOpacityInitial 0.1s forwards, links-fade-in 1.2s forwards;
+}
+
+@for $i from 1 through 4 {
+	.connect-links h3:nth-child(#{$i}) {
+		animation: setOpacityInitial 0s forwards, links-fade-in 1.2s .2s*$i forwards;
+	}
+}
+
+@keyframes setOpacityInitial {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes links-fade-in {
+	from {
+		opacity: 0;
+		top: 10em;
+	}
+	to {
+		opacity: 1;
+		top: 0em;
+	}
+}
+
+//index.html
 
 a:hover {
 	text-decoration: none;
@@ -176,6 +296,8 @@ a:hover {
 	width: 20em;
 	text-align: left;
 	margin-left: 1em;
+	position:fixed;
+	bottom:0.5em;
 }
 
 //Size and center text on mobile
@@ -203,7 +325,9 @@ a:hover {
 	font-family: 'Dosis', sans-serif;
 	font-size: 1.7em;
 	margin: 0;
-	width: 10em;
+	position: fixed;
+	top:0.3em;
+	//width: 10em;
 }
 
 .navbar-nav {
@@ -242,7 +366,7 @@ a:hover {
 	//filter: blur(0px) !important; 
 	//-webkit-filter: blur(0px) !important;
 	z-index: -1;
-	opacity: 0.2;
+	opacity: 0.15;
 	height: 4em;
 	width: 4em;
 	top: 0;
@@ -254,7 +378,7 @@ a:hover {
 	//border-style: solid;
 	background-color: #969696;
 	
-	transition: border 0.7s, background-color 0.7s, transform 2s linear, top 0.5s, left 0.5s;
+	transition: border 0.7s, background-color 0.7s, transform 2s linear, top 0.5s, left 0.5s, opacity 2s;
 	
 	// Fixes for animation causing page to flicker
 	-webkit-backface-visibility:hidden; 
@@ -383,7 +507,7 @@ $nav-mob-dark: #d8d8d8;
 		border-bottom: 2px solid $nav-primc;
 		content: "";
 		padding-top:5px;
-	  width:80%;
+	  width:100%;
 	  display:block;
 	  margin:0 auto;
 	}
@@ -398,7 +522,7 @@ $nav-mob-dark: #d8d8d8;
 		border-bottom: 2px solid $nav-primc;
 		content: "";
 		padding-top:5px;
-	  width:80%;
+	  width:100%;
 	  display:block;
 	  margin:0 auto;
 	}
@@ -409,7 +533,7 @@ $nav-mob-dark: #d8d8d8;
 		border-bottom: 2px solid $nav-primc;
 		content: "";
 		padding-top:5px;
-	  width:80%;
+	  width:100%;
 	  display:block;
 	  margin:0 auto;
 	}
