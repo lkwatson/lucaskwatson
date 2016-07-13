@@ -32,7 +32,8 @@ body {
 
 .skills-scoll-list {
 	height: 89vh;
-	overflow: scroll;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 .skills-navbar {
@@ -81,6 +82,7 @@ body {
 
 .skills-scoll-list p {
 	font-size: 1.3em;
+	font-weight: 500;
 }
 
 .skill-subhead {
@@ -251,6 +253,8 @@ a:hover {
 	width: 20em;
 	text-align: left;
 	margin-left: 1em;
+	position:fixed;
+	bottom:0.5em;
 }
 
 //Size and center text on mobile
@@ -278,7 +282,9 @@ a:hover {
 	font-family: 'Dosis', sans-serif;
 	font-size: 1.7em;
 	margin: 0;
-	width: 10em;
+	position: fixed;
+	top:0.3em;
+	//width: 10em;
 }
 
 .navbar-nav {
@@ -458,7 +464,7 @@ $nav-mob-dark: #d8d8d8;
 		border-bottom: 2px solid $nav-primc;
 		content: "";
 		padding-top:5px;
-	  width:80%;
+	  width:100%;
 	  display:block;
 	  margin:0 auto;
 	}
@@ -473,7 +479,7 @@ $nav-mob-dark: #d8d8d8;
 		border-bottom: 2px solid $nav-primc;
 		content: "";
 		padding-top:5px;
-	  width:80%;
+	  width:100%;
 	  display:block;
 	  margin:0 auto;
 	}
@@ -484,7 +490,7 @@ $nav-mob-dark: #d8d8d8;
 		border-bottom: 2px solid $nav-primc;
 		content: "";
 		padding-top:5px;
-	  width:80%;
+	  width:100%;
 	  display:block;
 	  margin:0 auto;
 	}
