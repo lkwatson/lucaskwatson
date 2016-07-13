@@ -10,9 +10,16 @@ if (document.readyState != 'loading'){
 
 $(window).load(function() {
 	
+	$('.email-spam-hide').text(function(i,t){
+		return t.replace("[at]","@");
+	});
+	$('.email-spam-hide').attr("href", function(i,t){
+    return 'mailto:'+this.text; 
+  });
+	
 	$('#skills-content-list').scrollspy({
     target: '#sidebar-nav-skills',
-    offset: 50
+    offset: 100
 	});
 	
 	$(".feature-hova-cola").hover(
