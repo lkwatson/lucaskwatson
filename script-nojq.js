@@ -126,8 +126,13 @@ $(window).load(function() {
 	setInterval(function(){animateBubles(0,0)}, 2000); //keep them moving
 	
 	setInterval(function(){
-		var winScroll = window.pageYOffset;
+	  var winScroll = window.pageYOffset;
 	  topOffsetBubbles(winScroll/-5);
+
+	  if(winScroll > 100) {
+	  	var nav = document.getElementById('main-navbar');
+	  	nav.style.backgroundColor = 'rgba(255,255,255,0.8)';
+	  }
 	}, 100);
 	
 });

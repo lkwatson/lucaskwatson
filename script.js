@@ -1,5 +1,8 @@
 $(document).ready(function() {
 
+	//THIS DOCUMENT IS DEPRECATED
+	//FOR UP TO DATE SCRIPT, SEE SCRIPT-NOJQ.JS
+
 	$('.email-spam-hide').text(function(i,t){
 		return t.replace("[at]","@");
 	});
