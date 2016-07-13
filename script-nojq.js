@@ -57,6 +57,7 @@ $(window).load(function() {
 			bubble.style.transform = 'translate3d(' + (Math.random() * 100) + 'vw,' + (Math.random() * 100) + 'vh,0)';
 
 			bubble.style.filter = 'blur('+( ((-1*depth)/5) + 2 )+'px)';
+			bubble.stylestyle["-webkit-filter"] = 'blur('+( ((-1*depth)/5) + 2 )+'px)';
 			
 			bubblesBack.appendChild(bubble);
 		}
