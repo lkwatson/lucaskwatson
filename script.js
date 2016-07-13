@@ -2,7 +2,7 @@ $(document).ready(function() {
 	
 	$('#skills-content-list').scrollspy({
     target: '#sidebar-nav-skills',
-    offset: 50
+    offset: 100
 	});
 	
 	$(".feature-hova-cola").hover(

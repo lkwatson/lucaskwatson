@@ -57,8 +57,11 @@ body {
   font-weight: 500; }
 
 .skills-scoll-list p {
-  font-size: 1.3em;
-  font-weight: 500; }
+  font-size: 1.2em;
+  font-weight: 400; }
+
+.skills-scoll-list h4 {
+  font-weight: 600; }
 
 .skill-subhead {
   color: #7e7e7e;
