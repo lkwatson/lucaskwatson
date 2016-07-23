@@ -149,6 +149,7 @@ a:hover {
     opacity: 0;
     margin-left: -1.6em; } }
 .page {
+  padding-top: 65px;
   margin-top: 10em; }
 
 .right-present {
