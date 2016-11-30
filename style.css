@@ -10,7 +10,7 @@
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700; }
 
-p {
+p, li {
   font-family: 'Lato', sans-serif;
   font-size: 1.1em;
   line-height: 1.5em;
