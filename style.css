@@ -49,6 +49,31 @@ p, li {
   color: #fff;
   background-color: #111; }
 
+.proj-icon {
+  padding: 0;
+  min-height: 430px;
+  background-color: #3e3e3e; }
+  .proj-icon h3 {
+    text-align: center;
+    color: white;
+    padding: 0 .5em;
+    margin: .3em; }
+  .proj-icon p {
+    padding: 0 1em;
+    color: white; }
+  .proj-icon a:hover {
+    text-decoration: none; }
+
+.pi-white {
+  background-color: #626262; }
+  .pi-white h3, .pi-white p {
+    color: white; }
+
+.image-proj-icon {
+  width: 100%;
+  display: block;
+  margin: 0 auto; }
+
 .contact-list {
   padding-top: 20px; }
 
