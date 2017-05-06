@@ -1,0 +1,135 @@
+<!doctype html>
+<html class="">
+<head>
+  <meta charset="utf-8">
+  <title>Lucas K Watson</title>
+  <meta name="description" content="Lucas K Watson is a Maker, Part Designer, and Web Developer. He's interested in the application of emerging technologies and research.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+	<!--   Use HTTPS -->
+  <link rel="canonical" href="https://www.lkwatson.me/"/>
+  <script>
+	  if(window.location.host == "lkwatson.me") {
+		  var host = "lkwatson.me";
+			if ((host == window.location.host) && (window.location.protocol != "https:")) {
+				window.location.protocol = "https";
+			}
+	  }else{
+		  var host = "www.lkwatson.me";
+			if ((host == window.location.host) && (window.location.protocol != "https:")) {
+				window.location.protocol = "https";
+			}
+		}
+	</script>
+ 
+<!--   <link rel="icon" href="favicon@1x.png" type="image/png" sizes="16x16"> -->
+<!--   <link rel="icon" href="favicon@2x.png" type="image/png" sizes="128x128"> -->
+<!--   <link rel="icon" href="favicon@4x.png" type="image/png" sizes="512x512"> -->
+  
+  <link rel="stylesheet" href="../libs/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="../style.css"/>
+  
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Lato" rel="stylesheet">
+
+  <script src="../libs/jquery/dist/jquery.min.js"></script>
+  <script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../script.js"></script>
+  
+	<!-- 	GA tag -->
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-67825496-1', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+	
+	<!-- 	SEO -->
+
+	<meta itemprop="name" content="Lucas K Watson">
+	<meta itemprop="description" content="Lucas K Watson description">
+	<!--<meta itemprop="image" content="https://www.lkwatson.me/img/">-->
+	
+	<meta property="og:url" content="https://www.lkwatson.me/">
+	<meta property="og:type" content="profile">
+	<meta property="og:title" content="Lucas K Watson - Web Developer, Engineer">
+	<!--<meta property="og:image" content="https://www.lkwatson.me/img/">-->
+	<meta property="og:description" content="Lucas K Watson is a Web Developer, Product Designer, and Sound Engineer. He enjoys working on innovative and exciting projects.">
+	<meta property="og:site_name" content="Lucas K Watson">
+	<meta property="og:locale" content="en_US">
+	
+</head>
+<body>
+	<!-- 	BEGIN CONTENT -->
+
+	<div id="page-landing" class="container">
+		<div class="row">
+  		<div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+  		  <h1 class="header-text text-center">Lucas K Watson</h1>
+  		  <h4 class="header-sum text-center">Enjoys tinkering and making new things. Working to learn more about quantum computing and acoustics. Photographs the outdoors.</h4>
+  		  
+  		  <div class="row tabs-contain">
+    		  <a href="/">
+      		  <div class="col-xs-4 tab">
+        		  About me
+      		  </div>
+    		  </a>
+    		  
+    		  <a href="/projects">
+    		    <div class="col-xs-4 tab selected">
+      		    Projects
+    		    </div>
+    		  </a>
+    		  
+          <a href="/contact">
+      		  <div class="col-xs-4 tab">
+        		  Contact
+      		  </div>
+          </a>
+  		  </div>
+    		
+    		<div class="content contact-list">
+      		
+      		<div class="row">
+        		<img class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2" src="img/sl-ext-lg.jpg">
+        		<div class="col-xs-12">
+          		<h3 class="subheader-text">Background</h3>
+          		<p>The idea of this project was based off the popular Netflix show <i>Stranger Things</i>, (don't worry, no spoilers here). The show's concept is that the "other side" can interact with the real world in through certain means, like electromagnetism. One such interaction occurs where Christmas lights are strung up on a wall, each one corresponding to a letter, allowing messages to be 'blinked' out, very similar to a Ouija board.</p>
+          		<p>Like many other makers as it has become apparent, I had the idea to make a replica that could be remotely controlled. However, I particularly chose to set the board up in a window facing the central plaza of BU's campus, and connect the board up to a server via a popular IoT board, the ESP8266.</p>
+          		
+          		<h3 class="subheader-text">Constraints</h3>
+              <ul>
+                <li>The board, and its letters, had to be visible from across a fairly wide street (Commonwealth ave)</li>
+                <li>The lights needed to be bright enough to be visible from dusk and on</li>
+                <li>Each light needs to be individually addressable</li>
+                <li>Messages needed to be queued up, and also checked for any profanity...</li>
+                <li>The board should attract attention, even when no message is being shown</li>
+              </ul>
+              
+              <h3 class="subheader-text">Development</h3>
+              <p>Some preliminary tests were done with mapping out letters in the window, and running across the street to see if it was visible. Sketching out letters for the given 3-paned window space, I mapped out the letters to maximize their size. However, during the night the letters were barely visible, even with a lit room.</p>
+              <img style="width: 80%; margin-left:10%;" src="img/sl-interior-lit.jpg">
+              <p>The solution was of course to increase light. With some makeshift aluminum foil reflectors, two lamps became two flood lights. To more evenly light the top area, string lights were hung (and surprisingly made a significant difference).</p>
+              <p>For the lights, I choose some single, RGB Neopixel LEDs. These allow me to animate each light individually, while only using 1 PWM data line, allowing for any type of animation. I did consider using tear-drop shape, authentic Christmas lights, but I soon realized creating a custom shift register for 26 different lights would take a good deal of soldering.</p>
+              <p>On the coding side of things, the ESP8266 can be conveniently programmed with the Arduino IDE. On</p>
+          		//IMAGE OF SERVER CLIENT DIAGRAM
+        		</div>
+      		</div>
+      		
+    		</div>
+  		</div>
+		</div>
+	</div>
+	
+	<div class="footer" style="position: relative; padding-top: 10vh; padding-left: 10px;">
+		<noscript>For a better browsing experience, turn on Javascript for this site</noscript>
+		<p><strong>Copyright 2017</strong> Lucas Watson</p>
+	</div>
+	
+</body>
+</html>
