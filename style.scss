@@ -61,6 +61,39 @@ p,li {
   background-color: #111;
 }
 
+//Projects
+
+.proj-icon {
+  padding: 0;
+  min-height: 430px;
+  
+  h3 {
+    text-align: center;
+    color: black;
+    padding: 0 .5em;
+    margin: .3em;
+  }
+  p {
+    padding: 0 1em;
+    color: black;
+  }
+  a{
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.image-proj-icon {
+  width: 90%;
+  display: block;
+  margin: 0% auto;
+  padding: 4px;
+  
+  border-radius: 50%;
+  border: 1px dashed black;
+}
+
 .contact-list {
   padding-top: 20px;
 }

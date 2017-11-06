@@ -26,15 +26,15 @@
 <!--   <link rel="icon" href="favicon@2x.png" type="image/png" sizes="128x128"> -->
 <!--   <link rel="icon" href="favicon@4x.png" type="image/png" sizes="512x512"> -->
   
-  <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="../libs/bootstrap/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="../libs/font-awesome/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="../style.css"/>
   
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Lato" rel="stylesheet">
 
-  <script src="libs/jquery/dist/jquery.min.js"></script>
-  <script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="script.js"></script>
+  <script src="../libs/jquery/dist/jquery.min.js"></script>
+  <script src="../libs/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../script.js"></script>
   
 	<!-- 	GA tag -->
 	
@@ -81,13 +81,13 @@
     		  </a>
     		  
     		  <a href="/projects">
-    		    <div class="col-xs-4 tab">
+    		    <div class="col-xs-4 tab selected">
       		    Projects
     		    </div>
     		  </a>
     		  
           <a href="/contact">
-      		  <div class="col-xs-4 tab selected">
+      		  <div class="col-xs-4 tab">
         		  Contact
       		  </div>
           </a>
@@ -95,10 +95,31 @@
     		
     		<div class="content contact-list">
       		
-      		<p><a href="#" class="email-spam-hide">contact[at]lucaskwatson.com</a></p>
-          <p><a href="https://github.com/lkwatson">Github</a></p>
-          <p><a href="https://www.linkedin.com/in/lucas-watson-60668349">LinkedIn</a></p>
-          <p><a href="http://stackoverflow.com/users/1224973/lucas">Stack Overflow</a></p>
+      		<div class="row">
+        		<img class="col-xs-10 col-xs-offset-1 col-md-8 col-md-offset-2" src="img/sl-ext-lg.jpg">
+        		<div class="col-xs-12">
+          		<h3 class="subheader-text">Background</h3>
+          		<p>The idea of this project was based off the popular Netflix show <i>Stranger Things</i>, (don't worry, no spoilers here). The show's concept is that the "other side" can interact with the real world in through certain means, like electromagnetism. One such interaction occurs where Christmas lights are strung up on a wall, each one corresponding to a letter, allowing messages to be 'blinked' out, very similar to a Ouija board.</p>
+          		<p>Like many other makers as it has become apparent, I had the idea to make a replica that could be remotely controlled. However, I particularly chose to set the board up in a window facing the central plaza of BU's campus, and connect the board up to a server via a popular IoT board, the ESP8266.</p>
+          		
+          		<h3 class="subheader-text">Constraints</h3>
+              <ul>
+                <li>The board, and its letters, had to be visible from across a fairly wide street (Commonwealth ave)</li>
+                <li>The lights needed to be bright enough to be visible from dusk and on</li>
+                <li>Each light needs to be individually addressable</li>
+                <li>Messages needed to be queued up, and also checked for any profanity...</li>
+                <li>The board should attract attention, even when no message is being shown</li>
+              </ul>
+              
+              <h3 class="subheader-text">Development</h3>
+              <p>Some preliminary tests were done with mapping out letters in the window, and running across the street to see if it was visible. Sketching out letters for the given 3-paned window space, I mapped out the letters to maximize their size. However, during the night the letters were barely visible, even with a lit room.</p>
+              <img style="width: 80%; margin-left:10%;" src="img/sl-interior-lit.jpg">
+              <p>The solution was of course to increase light. With some makeshift aluminum foil reflectors, two lamps became two flood lights. To more evenly light the top area, string lights were hung (and surprisingly made a significant difference).</p>
+              <p>For the lights, I choose some single, RGB Neopixel LEDs. These allow me to animate each light individually, while only using 1 PWM data line, allowing for any type of animation. I did consider using tear-drop shape, authentic Christmas lights, but I soon realized creating a custom shift register for 26 different lights would take a good deal of soldering.</p>
+              <p>On the coding side of things, the ESP8266 can be conveniently programmed with the Arduino IDE. On</p>
+          		//IMAGE OF SERVER CLIENT DIAGRAM
+        		</div>
+      		</div>
       		
     		</div>
   		</div>
