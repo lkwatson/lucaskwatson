@@ -92,71 +92,192 @@
       		  </div>
           </a>
   		  </div>
+  		  
+  		</div>
+		</div>
     		
-    		<div class="content contact-list">
+    		<div class="container content contact-list">
       		
-      		<h4 style="padding-bottom:1em;">Contact me for a fully-detailed engineering portfolio.</h4>
-      		
-      		<div class="row proj-icons">
-        		<div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 proj-icon">
-          		<a href="#">
-            		<img class="image-proj-icon" src="p/img/sl-sm.jpg"/>
-                <h3>Stranger Lights Ouija Board</h3>
-                <p>On light-up alphabet board, users could submit a message that would blink out. Visible on campus.</p>
-          		</a>
+      		<div class="row">
+          <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+            <h4 style="padding-bottom:1em;">Contact me for a fully-detailed engineering portfolio and resume.</h4>
+            
+        		<div class="row">
+        		  <div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2"><img class="image-proj-icon" src="p/img/at-sm.png"/></div>
+        		  <div class="col-sm-8 col-xs-12">
+                <h3 class="proj-head">Home Assistant</h3>
+                <h4 class="proj-subhead">November 2017 (In progress) — Personal Project</h4>
+                <p>Using an Android Things developer kit I received at a Hackathon, I created a home assistant which caters to my house.</p>
+                <p>The 8-segment display which shows the time until the next inbound T (Boston subway) will arrive to the nearest stop to the house.</p>
+                <p>Utilizing the camera, the device detects faces using the Cloud Vision API, and upon seeing a face, greets it by saying "Welcome home". Currently, I'm working on integrating facial recognition, such that the device will be able to say "Welcome home [name]" for stored faces.</p>
+                <p>Current work also involves integrating the Google Assistant API.</p>
+                
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h4 class="subheader-text">Tech Used.</h4>
+                    <ul>
+                      <li>Android Things Developer Kit</li>
+                      <li>Google Cloud Vision API</li>
+                    </ul>
+                  </div>
+                </div>
+                
+        		  </div>
+        		</div>
+     			
+            <br>
+        
+        		<div class="row">
+        		  <div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2"><img class="image-proj-icon" src="p/img/sl-sm.jpg"/></div>
+        		  <div class="col-sm-8 col-xs-12">
+                <h3 class="proj-head">Stranger Lights Ouija Board</h3>
+                <h4 class="proj-subhead">October 2016 — Personal Project</h4>
+                <p>Inspired by popular Netflix show <i>Stranger Things</i>, I created a controllable alphabet wall in an apartment window, opposite of BU’s central campus. Similar to a Ouija board, one can enter a message, and have it blinked out by LEDs behind each alphabet letter.</p>
+                <p>Video of the board blinking out "Hello World": <a href="https://www.youtube.com/watch?v=yO1fY9MWoLA">YouTube</a></p>
+                <p>The website used to submit messages, where a sample live-queue is still visible: <a href="https://www.strangerlights.com/">strangerlights.com</a></p>
+                
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h4 class="subheader-text">Tech Used.</h4>
+                    <ul>
+                      <li>NodeJS (Backend for website)</li>
+                      <li>ESP8266 (IoT Board)</li>
+                      <li>WS2812B RGB LEDs</li>
+                    </ul>
+                  </div>
+                </div>
+                
+        		  </div>
         		</div>
         		
-        		<div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 proj-icon">
-          		<a href="#">
-            		<img class="image-proj-icon" src="p/img/cable-sm.jpg"/>
-                <h3>Magsafe Cable Saver</h3>
-                <p>A 3D printed case to fit over a Magsafe 1 cord. Adds rigidity in efforts to expand lifetime of an already frayed cable.</p>
-          		</a>
+        		<br>
+        		
+        		<div class="row">
+        		  <div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2"><img class="image-proj-icon" src="p/img/son-sm.png"/></div>
+        		  <div class="col-sm-8 col-xs-12">
+                <h3 class="proj-head">Sonic Levitator</h3>
+                <h4 class="proj-subhead">February 2017 — Personal Project, Team of 2</h4>
+                <p>Working under Professor Holt, a student and myself were tasked with improving a sonic levitation demonstration. 4 speakers serve to levitate a styrofoam ball in a chamber. When running, the apparatus is very loud, and requires a large setup with bulky frequency generators and amplifiers.</p>
+                <p>My part of the project involved simplifying the large frequency driver setup to a smaller, portable system. To accomplish this, I moved frequency generation to small ATTiny85's paired with Chebyshev filters (based upon <a href="http://interface.khm.de/index.php/lab/interfaces-advanced/arduino-dds-sinewave-generator/">this</a>). Then, a parent Arduino controlled 4 of these generators to ensure their phases were linked.</p>
+                
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h4 class="subheader-text">Tech Used.</h4>
+                    <ul>
+                      <li>ATTiny85's (Arduino)</li>
+                      <li>Chebyshev Filter</li>
+                    </ul>
+                  </div>
+                </div>
+                
+        		  </div>
         		</div>
         		
-        		<div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 proj-icon">
-          		<a href="#">
-            		<img class="image-proj-icon" src="p/img/mb-sm.jpg"/>
-                <h3>Miniature Pinball</h3>
+        		<br>
+        		
+        		<div class="row">
+        		  <div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2"><img class="image-proj-icon" src="p/img/nn-small.png"/></div>
+        		  <div class="col-sm-8 col-xs-12">
+                <h3 class="proj-head">Neural Network</h3>
+                <h4 class="proj-subhead">November 2016 — Class Project, Team of 2</h4>
+                <p>For a final project in an introductory Python course, I worked together with one of my peers to create an implementation of a Neural Network from scratch in Python, using Numpy. We used the common MNIST handwritten digit database, and set out to create a network to recognize digits.</p>
+                <p>Our network used the Stochastic Gradient Descent, along with optimizations like minibatch for training. We also implemented a basic form of annealed learning. Our network reached a peak accuracy of about 96%.</p>
+        		  </div>
+        		</div>
+        		
+        		<br>
+        		
+        		<div class="row">
+        		  <div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2"><img class="image-proj-icon" src="p/img/cable-sm.jpg"/></div>
+        		  <div class="col-sm-8 col-xs-12">
+                <h3 class="proj-head">Magsafe Cable Saver</h3>
+                <h4 class="proj-subhead">September 2015 — Personal Project</h4>
+                <p>While Apple’s cables are known for their sleek design, they aren’t known for their durability. It came to be that my MagSafe connector became frayed. Instead of buying a whole new one for $80, I decided to try and use 3D printing to solve this.</p>
+                <p>After iterating through a few prototypes, I found a part that fit well. It's still available to buy <a href="https://www.shapeways.com/product/METMKAZBU/macbook-magsafe-1-cable-saver-and-fixer">here</a> on Shapeways.</p>
+                
+                                
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h4 class="subheader-text">Tech Used.</h4>
+                    <ul>
+                      <li>Fusion 360</li>
+                      <li>Objet 3D printer (prototyping)</li>
+                      <li>Shapeways 3D printing (SLS service)</li>
+                    </ul>
+                  </div>
+                </div>
+                
+        		  </div>
+        		</div>
+            
+            <br>
+            
+            <div class="row">
+        		  <div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2"><img class="image-proj-icon" src="p/img/mb-sm.jpg"/></div>
+        		  <div class="col-sm-8 col-xs-12">
+                <h3 class="proj-head">Miniature Pinball Machine</h3>
+                <h4 class="proj-subhead">November 2016 — Class Project, Team of 3</h4>
                 <p>Group project in learning methods for machining different materials. Made from acrylic and HDPE. Uses spring and moment arm mechanism for lever action.</p>
-          		</a>
+                          
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h4 class="subheader-text">Tech Used.</h4>
+                    <ul>
+                      <li>Gibbs CAM</li>
+                      <li>CNC Machine</li>
+                      <li>Solidworks</li>
+                    </ul>
+                  </div>
+                </div>
+                
+        		  </div>
         		</div>
         		
-        		<div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 proj-icon">
-          		<a href="#">
-            		<img class="image-proj-icon" src="p/img/clk-sm.jpg"/>
-                <h3>Clock Stand</h3>
-                <p>Class project. Given challenge to create a simple stand from a steel bar, allowing for two viewing angles of the clock. Design only uses bends, no welds or joints.</p>
-          		</a>
+        		<br>
+        		
+        		<div class="row">
+        		  <div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2"><img class="image-proj-icon" src="p/img/coff-sm.jpg"/></div>
+        		  <div class="col-sm-8 col-xs-12">
+                <h3 class="proj-head">Coffee Roasting</h3>
+                <h4 class="proj-subhead">January 2017 — Personal Project</h4>
+                <p>Roasted single-origin beans on a stovetop. Kept log of roast time, temperature, and color. Blind tasted each batch and compared to data, qualitatively verifying the relationship between roast time and certain flavor characteristics.</p>
+        		  </div>
         		</div>
         		
-        		<div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 proj-icon">
-          		<a href="#">
-            		<img class="image-proj-icon" src="p/img/owl-sm.jpg"/>
-                <h3>3D Printed Wax Mold</h3>
+        		<br>
+        		
+        		<div class="row">
+        		  <div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2"><img class="image-proj-icon" src="p/img/owl-sm.jpg"/></div>
+        		  <div class="col-sm-8 col-xs-12">
+                <h3 class="proj-head">3D Printed Wax Mold</h3>
+                <h4 class="proj-subhead">December 2016 — Personal Project</h4>
                 <p>3D printed mold, mimics elements of a metal casting mold, uses wax. More successful design created allowed part to be removed (not pictured). To be used as a teaching tool.</p>
-          		</a>
+        		  </div>
         		</div>
         		
-        		<div class="col-md-4 col-md-offset-0 col-sm-8 col-sm-offset-2 col-xs-10 col-xs-offset-1 proj-icon">
-          		<a href="#">
-            		<img class="image-proj-icon" src="p/img/coff-sm.jpg"/>
-                <h3>Coffee Roasting</h3>
-                <p>Roasted single-origin beans on a stovetop. Kept log of roast time, temperature, and color (with pictures). Blind tasted each batch and compared to data.</p>
-          		</a>
+            <br>
+            
+            <div class="row">
+        		  <div class="col-sm-4 col-sm-offset-0 col-xs-8 col-xs-offset-2"><img class="image-proj-icon" src="p/img/clk-sm.jpg"/></div>
+        		  <div class="col-sm-8 col-xs-12">
+                <h3 class="proj-head">Clock Stand</h3>
+                <h4 class="proj-subhead">September 2015 — Personal Class Project</h4>
+                <p>Given challenge to create a simple stand from a steel bar, allowing for two viewing angles of the clock. Design only uses bends, no welds or joints.</p>
+        		  </div>
         		</div>
+
+            <br>
         		
             <div class="col-xs-10 col-xs-offest-1">
               <br>
               <br>
           		<p>More not pictured (yet):</p>
           		<ul>
-            		<li>Neural Network from scratch in Numpy</li>
             		<li>Custom built 3D printer</li>
             		<li>Several Haunted House room designs (and builds)</li>
-            		<li>Sonic Levitator Casing and Circuit</li>
           		</ul>
             </div>
+      		</div>
       		</div>
       		
     		</div>

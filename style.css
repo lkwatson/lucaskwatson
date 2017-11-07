@@ -64,12 +64,17 @@ p, li {
     text-decoration: none; }
 
 .image-proj-icon {
-  width: 90%;
+  width: 100%;
   display: block;
-  margin: 0% auto;
+  margin: 0px auto 15px auto;
   padding: 4px;
-  border-radius: 50%;
-  border: 1px dashed black; }
+  border: 1px solid black; }
+
+.proj-head {
+  margin-top: 0px !important; }
+
+.proj-subhead {
+  color: #828282; }
 
 .contact-list {
   padding-top: 20px; }
