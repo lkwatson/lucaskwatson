@@ -89,6 +89,8 @@ p, li {
 }
 
 .proj-head {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
   margin-top: 0px !important;
   color: #2A2D34;
 }
