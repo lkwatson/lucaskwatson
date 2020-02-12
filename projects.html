@@ -116,9 +116,9 @@
               <h3 class="proj-head">Multi-Robot System for Load Transport</h3>
               <h4 class="proj-subhead">Senior Capstone Project</h4>
               <h4 class="proj-subhead">May 2019</h4>
-              <p>A multi-robot system (MRS) which may transport an arbitrary-sized load. A formation of agents may be loaded with an object, and then the system may be guided by applying a small push to the object. Idependently, each agent measures the force vector and drives in that direction, effectively multiplying the push applied to the object. This enables a single person to transport a relatively massive object in a warehouse.</p>
-              <p>Our team of four began this project by surveying warehouse robotics and identifying areas where it may be improved. We decided to create a conceptual design for a robot system, which unlike conventional warehouse robots, would interact directly with a human worker and additionally may handle an unstructured processes. We presented a technical proposal to the senior R&D team at Amazon Robotics, and received funding to pursue building a protoype.</p>
-              <p>We sucessfully built two iterations of prototypes, and with our final prototpye had three functioning robots that could operate in a system. At the end of the term, we won the <i>Most Outstanding Senior Capstone Project in Mechanical Engineering</i> award.</p>
+              <p>For our senior capstone project, we developed a multi-robot system (MRS) which may transport an arbitrary-sized load. A formation of agents may be loaded with an object, and then the system may be guided by applying a small push to the object. Idependently, each agent measures the force vector and drives in that direction, effectively multiplying the push applied to the object. This enables a single person to transport a relatively massive object in a warehouse.</p>
+              <p>Our team of four began this project by surveying warehouse robotics and identifying areas where it may be improved. We decided to create a conceptual design for a robot system, which unlike conventional warehouse robots, would operate interactively with a human worker and could handle an unstructured processes. We presented a technical proposal to the senior R&D team at Amazon Robotics, and received funding to pursue building a protoype.</p>
+              <p>We sucessfully built two iterations of prototypes, and with our final prototpye we had three functioning robots that could operate in a system. At the end of the term, we won the <i>Most Outstanding Senior Capstone Project in Mechanical Engineering</i> award.</p>
               <p>An experimental part of the project considered having agents arrange into a formation autonomously based upon a perceived object. Perception of the object and relative localization of agents with respect to one another was accomplished with the Intel Realsense D435i.</p>
             </div>
           </div>
@@ -130,7 +130,7 @@
             <div class="col-sm-8 col-xs-12">
               <h3 class="proj-head">Immitation Learning Arm</h3>
               <h4 class="proj-subhead">February 2020</h4>
-              <p>Providing motion instructions for a robot arm is difficult. Industrial arms require some amount of training or expert knowledge to operate. Other arms, particularly collaborative ones, allow the user to directly position the end effector and define waypoints. Waypoint following is relatively limited compared to the full motion ability of the arm and doesn't provided an interface for positioning arm joints.</p>
+              <p>Providing motion instructions for a robot arm is difficult. Industrial arms require training or expert knowledge to operate. Other arms, particularly collaborative ones, allow the user to directly position the end effector and define waypoints. However, waypoint following is relatively limited compared to the full motion ability of the arm and doesn't provided an interface for positioning arm joints.</p>
               <p>Utilizing a prototype LiDAR unit from Panasonic, we're developing a system by which a human may guide a robot arm by demonstration, providing a framework for immitation learning.</p>
               <p>The first stage of this project is having a Sawyer robot arm mimic the motion of a human arm in real-time. By fusing the point cloud from the LiDAR with RGB images, we can reliably estimate the pose of the human arm with an Extended Kalman Filter (EKF). Then, the arm may be commanded with joint angles mapped from joint angles of the human arm. Alternatively, we're experimenting with commanding the x,y,z pose of the end effector and biasing the nullspace with joint angles from the human arm.</p>
               <p>Currently, we're using the NVIDIA Xavier for it's performance in inferencing CNNs.</p>
@@ -144,7 +144,7 @@
             <div class="col-sm-8 col-xs-12">
               <h3 class="proj-head">Fasimov</h3>
               <h4 class="proj-subhead">March 2018</h4>
-              <p>With this project, I wanted to create a robot to study how people respond to a robot recognizing them. I determined the robot should be able to navigate an environment, recognizing people’s faces, and express emotions. I also decided to name the bot Fasimov.</p>
+              <p>With this project, I wanted to create a robot to study how people respond to a robot recognizing them. To do this, I desgined Fasimov to be able to navigate an environment, recognizing people’s faces, and express emotions.</p>
               <p>I wanted to make Fasimov emote in human-like ways without mimicking human features. I first sought to utilize motion in the “head” of the robot. I designed the head such that it could swivel with two degrees-of-freedom, acting like a human neck. In addition to motion, I added RGB lights to the top of the head. A speaker inside the bot allowed me to play sounds or use text-to-speech audio. A ToF depth sensor along with an ultrasonic rangefinder on the front allow the robot to navigate.</p>
             </div>
           </div>
