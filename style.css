@@ -1,91 +1,115 @@
 .text-center {
-  text-align: center; }
+  text-align: center;
+}
 
 .header-text {
   padding-top: 10vh;
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700; }
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+}
 
 .subheader-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-weight: 700; }
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 700;
+  color: #424651;
+}
 
 p, li {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-size: 1.1em;
   line-height: 1.5em;
-  font-weight: 300; }
+  font-weight: 300;
+  color: #2A2D34;
+}
 
 .header-sum {
   font-weight: 400;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.4em;
-  padding: 10px 10px; }
+  padding: 10px 10px;
+}
 
 .tabs-contain {
   border-top: 1px solid black;
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid black;
+}
 
 .tab {
   text-align: center;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   padding: 10px;
-  transition: background-color .2s, color .2s; }
+  transition: background-color 0.2s, color 0.2s;
+}
 
 .tabs-contain a {
   color: black;
-  text-decoration: none !important; }
+  text-decoration: none !important;
+}
 
 .tab:hover {
   color: black;
-  background-color: #ededed; }
+  background-color: #C1C4CC;
+}
 
 .selected, .tab:active {
   color: white;
-  background-color: #a1a1a1; }
+  background-color: #424651;
+}
 
 *::selection {
   color: #fff;
-  background-color: #111; }
+  background-color: #111;
+}
 
 .proj-icon {
   padding: 0;
-  min-height: 430px; }
-  .proj-icon h3 {
-    text-align: center;
-    color: black;
-    padding: 0 .5em;
-    margin: .3em; }
-  .proj-icon p {
-    padding: 0 1em;
-    color: black; }
-  .proj-icon a:hover {
-    text-decoration: none; }
+  min-height: 430px;
+}
+.proj-icon h3 {
+  text-align: center;
+  color: black;
+  padding: 0 0.5em;
+  margin: 0.3em;
+}
+.proj-icon p {
+  padding: 0 1em;
+  color: black;
+}
+.proj-icon a:hover {
+  text-decoration: none;
+}
 
 .image-proj-icon {
   width: 100%;
   display: block;
   margin: 0px auto 15px auto;
   padding: 4px;
-  border: 1px solid black; }
+  border: 1px solid black;
+}
 
 .proj-head {
-  margin-top: 0px !important; }
+  margin-top: 0px !important;
+  color: #2A2D34;
+}
 
 .proj-subhead {
-  color: #828282; }
+  color: #424651;
+}
 
 .contact-list {
-  padding-top: 20px; }
+  padding-top: 20px;
+}
 
 .contact-list a {
   color: #2e5191;
   text-decoration: none !important;
-  transition: color .2s; }
+  transition: color 0.2s;
+}
 
 .contact-list a:hover, .contact-list a:active {
   color: #4e7cd2;
-  text-decoration: none !important; }
+  text-decoration: none !important;
+}
 
 /*# sourceMappingURL=style.css.map */

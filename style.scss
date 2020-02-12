@@ -1,3 +1,9 @@
+$near_black: #2A2D34;
+$mid_grey: #424651;
+$light_grey: #C1C4CC;
+$room_blue: #235789;
+$light_room_blue: #98C1D9;
+
 .text-center {
   text-align: center;
 }
@@ -11,6 +17,7 @@
 .subheader-text {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 700;
+  color: $mid_grey;
 }
 
 p,li {
@@ -18,6 +25,7 @@ p,li {
   font-size: 1.1em;
   line-height: 1.5em;
   font-weight: 300;
+  color: $near_black;
 }
 
 .header-sum {
@@ -48,12 +56,12 @@ p,li {
 
 .tab:hover {
   color: black;
-  background-color: #ededed;
+  background-color: $light_grey;
 }
 
 .selected, .tab:active {
   color: white;
-  background-color: #a1a1a1;
+  background-color: $mid_grey;
 }
 
 *::selection {
@@ -95,10 +103,11 @@ p,li {
 
 .proj-head {
   margin-top: 0px !important;
+  color: $near_black;
 }
 
 .proj-subhead {
-  color: #828282;
+  color: $mid_grey;
 }
 
 .contact-list {
